@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme{
+  --breakpoint-xs: 30rem;
+  --breakpoint-xss: 15rem;
+
+  --color-text: #49557e;
+  --color-tomato: #ff6347;
+  --color-btn-hover: #fff4f2;
+}
+
+
+@layer utilities{
+  .flex-bwt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-cen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--color-text);
+  }
+
+  .header{
+    height: 34vw;
+    margin: 30px auto !important;
+    background: url("/header_img.png") no-repeat;
+    background-size: contain;
+    position: relative;
+  }
+
+  .explore-menu-text{
+    columns: #808080;
+  }
+
+  .explore-menu-list::-webkit-scrollbar{
+    display: none;
+  }
+
+  .explore-active{
+    border: 4px solid tomato;
+    padding: 2px;
+  }
+  .nav-profile:hover .nav-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px !important;
+    border: 1px solid tomato;
+    border-radius: 4px;
+    outline: 2px solid white;
+    list-style: none;
+  }
+}
+
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes rotate{
+  100%{
+    transform: rotate(360deg);
+  }
+}
